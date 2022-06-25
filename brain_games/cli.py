@@ -2,11 +2,12 @@
 import prompt
 
 
-def main():
-    print("Welcome to the Brain Games!")
+def welcome_user():
+    """Welcome user."""  # noqa: DAR201
+    return ('Welcome to Brain Games!')
+
+
+def name_question():
+    """Ask a name."""  # noqa: DAR201
     name = prompt.string('May I have your name? ')
-    print('Hello,', name, '!')
-
-
-if __name__ == '__main__':
-    main()
+    return ('Hello,', name, '!')
