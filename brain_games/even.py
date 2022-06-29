@@ -24,7 +24,8 @@ def welcome_user():
             step_counter += 1
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{check}'.")
+            print(f"'{answer}' is wrong answer ;(.", end=' ')
+            print(f"Correct answer was '{check}'.")
             print(f"Let's try again, {name}")
             break
     if step_counter == 3:
