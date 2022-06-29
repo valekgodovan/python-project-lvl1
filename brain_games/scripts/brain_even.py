@@ -4,7 +4,7 @@ from brain_games.even import welcome_user
 
 
 def main():
-    """Main logic."""
+    """Run logic."""
     welcome_user()
 
 

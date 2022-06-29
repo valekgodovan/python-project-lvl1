@@ -1,6 +1,7 @@
 """The even game logic."""
-import prompt
 import random
+
+import prompt
 
 
 def welcome_user():
@@ -10,8 +11,8 @@ def welcome_user():
     print(f'Hello, {name}!')
     print('Answer "yes" if the number is even, otherwise answer "no".')
     step_counter = 0
-    for i in range(3):
-        num = random.randint(0, 99)
+    while step_counter < 3:
+        num = random.randint(0, 999)
         if num % 2 == 0:
             check = 'yes'
         else:
@@ -21,10 +22,10 @@ def welcome_user():
         answer = input()
         if answer == check:
             step_counter += 1
-            print(f'Correct!')
+            print('Correct!')
         else:
-            print(f'{answer} is wrong answer ;(. Correct answer was {check}.')
-            print(f'Let\'s try again, {name}')
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{check}'.")
+            print(f"Let's try again, {name}")
             break
     if step_counter == 3:
         print(f'Congratulations, {name}!')
