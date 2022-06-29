@@ -4,10 +4,10 @@ import prompt
 
 def welcome_user():
     """Welcome user."""  # noqa: DAR201
-    return ('Welcome to Brain Games!')
+    return 'Welcome to the Brain Games!'
 
 
 def name_question():
-    """Ask a name."""  # noqa: DAR201
+    """Ask name question."""  # noqa: DAR201
     name = prompt.string('May I have your name? ')
-    return ('Hello,', name, '!')
+    print('Hello,', name, '!')

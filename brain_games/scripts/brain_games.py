@@ -5,7 +5,7 @@ from brain_games.cli import name_question, welcome_user
 
 def main():
     """Run main."""
-    welcome_user()
+    print(welcome_user())
     name_question()
 
 
