@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 """Main program."""
-from games.even import even
+from games.calc import calc
 
 
 def main():
-    """Run even logic."""
-    even()
+    """Run calculator logic."""
+    calc()
 
 
 if __name__ == '__main__':

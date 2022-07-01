@@ -21,3 +21,6 @@ brain-even:
 
 reinstall:
 	python3 -m pip install --user --force-reinstall dist/*.whl
+
+brain-calc:
+	poetry run brain-calc
