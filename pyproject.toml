@@ -1,7 +1,6 @@
 [tool.poetry]
 packages = [
   { include = "brain_games" },
-  { include = "games" },
 ]
 
 name = "hexlet-code"

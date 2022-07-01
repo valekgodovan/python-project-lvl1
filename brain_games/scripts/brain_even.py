@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Main program."""
-from games.even import even
+from brain_games.games.even import even
 
 
 def main():
