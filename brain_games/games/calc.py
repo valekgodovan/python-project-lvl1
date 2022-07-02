@@ -1,3 +1,4 @@
+"""The calculator game logic."""
 import random
 
 from brain_games.game_logic import hello_user, wrong_answer
