@@ -6,11 +6,11 @@ from brain_games.game_logic import hello_user, wrong_answer
 
 def find_divisor(num1, num2):
     divisor = 1
-    if num1 <= num2:
-        small_num = num1
+    if num1 >= num2:
+        big_num = num1
     else:
-        small_num = num2
-    for i in range(1, small_num + 1):
+        big_num = num2
+    for i in range(1, big_num + 1):
         if num1 % i == 0 and num2 % i == 0:
             divisor = i
     return str(divisor)
