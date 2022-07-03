@@ -6,6 +6,7 @@ from brain_games.game_logic import ask_question, hello_user, wrong_answer
 
 def is_prime(num):
     for i in range(2, num + 1):
+        div = 1
         if num % i == 0:
             div = i
             break
