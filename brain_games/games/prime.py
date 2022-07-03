@@ -18,10 +18,10 @@ def is_prime(num):
 
 def prime():
     name = hello_user()
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     step_counter = 0
     while step_counter < 3:
         num = random.randint(1, 20)
-        print('Answer "yes" if given number is prime. Otherwise answer "no".')
         user_answer = ask_question(num)
         correct_answer = is_prime(num)
         if user_answer == correct_answer:
