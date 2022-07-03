@@ -1,7 +1,6 @@
 """The game logic."""
-import random
-
 import prompt
+
 
 def hello_user():
     print('Welcome to the Brain Games!')

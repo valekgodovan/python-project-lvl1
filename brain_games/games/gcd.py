@@ -1,8 +1,8 @@
 """The great common divisor game logic."""
 import random
 
-
 from brain_games.game_logic import hello_user, wrong_answer
+
 
 def find_divisor(num1, num2):
     if num1 <= num2:
