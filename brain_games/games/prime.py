@@ -1,34 +1,24 @@
-"""The brain prime logic."""
+"""The brain prime game logic."""
 import random
 
-from brain_games.game_logic import ask_question, hello_user, wrong_answer
+from brain_games.game_logic import game_logic
 
 
-def is_prime(num):
-    div = 1
-    for i in range(2, num + 1):
-        if num % i == 0:
-            div = i
+def get_task():
+    task = random.randint(0, 50)
+    divisor = 1
+    for i in range(2, task + 1):
+        if task % i == 0:
+            divisor = i
             break
-    if div == num:
-        return 'yes'
+    if divisor == task:
+        correct_answer = 'yes'
+        return task, correct_answer
     else:
-        return 'no'
+        correct_answer = 'no'
+        return task, correct_answer
 
 
 def prime():
-    name = hello_user()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    step_counter = 0
-    while step_counter < 3:
-        num = random.randint(1, 20)
-        user_answer = ask_question(num)
-        correct_answer = is_prime(num)
-        if user_answer == correct_answer:
-            step_counter += 1
-            print('Correct!')
-        else:
-            wrong_answer(user_answer, correct_answer, name)
-            break
-    if step_counter == 3:
-        print(f'Congratulations, {name}!')
+    question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    game_logic(question, get_task)

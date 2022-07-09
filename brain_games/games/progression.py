@@ -1,10 +1,10 @@
 """The brain progression game logic."""
 import random
 
-from brain_games.game_logic import ask_question, hello_user, wrong_answer
+from brain_games.game_logic import game_logic
 
 
-def get_progression():
+def get_task():
     first_term = random.randint(0, 10)
     difference = random.randint(1, 5)
     missing_term = random.randint(0, 9)
@@ -17,20 +17,10 @@ def get_progression():
     list_progression[missing_term] = '..'
     list_progression = [str(i) for i in list_progression]
     str_progr = ' '.join(list_progression)
-    return (str_progr, correct_answer)
+    task = str_progr
+    return task, correct_answer
 
 
 def progression():
-    name = hello_user()
-    step_counter = 0
-    while step_counter < 3:
-        new_progression, correct_answer = get_progression()
-        user_answer = ask_question(new_progression)
-        if user_answer == correct_answer:
-            step_counter += 1
-            print('Correct!')
-        else:
-            wrong_answer(user_answer, correct_answer, name)
-            break
-    if step_counter == 3:
-        print(f'Congratulations, {name}!')
+    question = 'What number is missing in the progression?'
+    game_logic(question, get_task)

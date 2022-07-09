@@ -4,7 +4,7 @@ import random
 from brain_games.game_logic import game_logic
 
 
-def give_task():
+def get_task():
     task = random.randint(0, 99)
     if task % 2 == 0:
         correct_answer = 'yes'
@@ -15,4 +15,4 @@ def give_task():
 
 def even():
     question = 'Answer "yes" if the number is even, otherwise answer "no".'
-    game_logic(question, give_task)
+    game_logic(question, get_task)

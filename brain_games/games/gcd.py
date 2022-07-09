@@ -1,37 +1,24 @@
 """The great common divisor game logic."""
 import random
 
-from brain_games.game_logic import hello_user, wrong_answer
+from brain_games.game_logic import game_logic
 
 
-def find_divisor(num1, num2):
+def get_task():
+    num_1 = random.randint(0, 50)
+    num_2 = random.randint(0, 50)
+    task = f'{num_1} {num_2}'
     divisor = 1
-    if num1 >= num2:
-        big_num = num1
+    if num_1 >= num_2:
+        big_num = num_1
     else:
-        big_num = num2
+        big_num = num_2
     for i in range(1, big_num + 1):
-        if num1 % i == 0 and num2 % i == 0:
-            divisor = i
-    return str(divisor)
+        if num_1 % i == 0 and num_2 % i == 0:
+            divisor = str(i)
+    return task, divisor
 
 
 def gcd():
-    name = hello_user()
-    print('Find the greatest common divisor of given numbers.')
-    step_counter = 0
-    while step_counter < 3:
-        num_1 = random.randint(0, 100)
-        num_2 = random.randint(0, 100)
-        correct_answer = find_divisor(num_1, num_2)
-        print(f'Question: {num_1} {num_2}')
-        print('Your answer:', end=' ')
-        user_answer = input()
-        if user_answer == correct_answer:
-            step_counter += 1
-            print('Correct!')
-        else:
-            wrong_answer(user_answer, correct_answer, name)
-            break
-    if step_counter == 3:
-        print(f'Congratulations, {name}!')
+    question = 'Find the greatest common divisor of given numbers.'
+    game_logic(question, get_task)
