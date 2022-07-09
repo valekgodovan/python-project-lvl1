@@ -22,4 +22,4 @@ def get_task():
 
 def calc():
     question = 'What is the result of the expression?'
-    game_logic(question, get_task)    
+    game_logic(question, get_task)
