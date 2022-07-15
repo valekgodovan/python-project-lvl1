@@ -1,7 +1,8 @@
 """The even game logic."""
 import random
 
-from brain_games.game_logic import game_logic
+
+QUESTUON = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_task():
@@ -11,8 +12,3 @@ def get_task():
     else:
         correct_answer = 'no'
     return (task, correct_answer)
-
-
-def even():
-    question = 'Answer "yes" if the number is even, otherwise answer "no".'
-    game_logic(question, get_task)
