@@ -1,7 +1,8 @@
 """The calculator game logic."""
 import random
 
-from brain_games.game_logic import game_logic
+
+QUESTION = 'What is the result of the expression?'
 
 
 def get_task():
@@ -18,8 +19,3 @@ def get_task():
         task = f'{num_1} * {num_2}'
         correct_answer = str(num_1 * num_2)
     return (task, correct_answer)
-
-
-def calc():
-    question = 'What is the result of the expression?'
-    game_logic(question, get_task)
