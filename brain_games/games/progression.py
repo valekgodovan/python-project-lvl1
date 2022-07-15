@@ -1,7 +1,8 @@
 """The brain progression game logic."""
 import random
 
-from brain_games.game_logic import game_logic
+
+QUESTION = 'What number is missing in the progression?'
 
 
 def get_task():
@@ -19,8 +20,3 @@ def get_task():
     str_progr = ' '.join(list_progression)
     task = str_progr
     return task, correct_answer
-
-
-def progression():
-    question = 'What number is missing in the progression?'
-    game_logic(question, get_task)

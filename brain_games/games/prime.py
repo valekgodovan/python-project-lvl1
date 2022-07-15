@@ -1,7 +1,8 @@
 """The brain prime game logic."""
 import random
 
-from brain_games.game_logic import game_logic
+
+QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def get_task():
@@ -17,8 +18,3 @@ def get_task():
     else:
         correct_answer = 'no'
         return task, correct_answer
-
-
-def prime():
-    question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    game_logic(question, get_task)
