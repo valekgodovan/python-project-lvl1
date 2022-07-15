@@ -5,16 +5,16 @@ import random
 QUESTION = 'Find the greatest common divisor of given numbers.'
 
 
+def get_divisor(num_1, num_2):
+    if num_2 == 0:
+        return num_1
+    else:
+        return get_divisor(num_2, num_1 % num_2)
+
+
 def get_task():
     num_1 = random.randint(0, 50)
     num_2 = random.randint(0, 50)
     task = f'{num_1} {num_2}'
-    divisor = 1
-    if num_1 >= num_2:
-        big_num = num_1
-    else:
-        big_num = num_2
-    for i in range(1, big_num + 1):
-        if num_1 % i == 0 and num_2 % i == 0:
-            divisor = str(i)
+    divisor = str(get_divisor(num_1, num_2))
     return task, divisor
