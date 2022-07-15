@@ -1,7 +1,8 @@
 """The great common divisor game logic."""
 import random
 
-from brain_games.game_logic import game_logic
+
+QUESTION = 'Find the greatest common divisor of given numbers.'
 
 
 def get_task():
@@ -17,8 +18,3 @@ def get_task():
         if num_1 % i == 0 and num_2 % i == 0:
             divisor = str(i)
     return task, divisor
-
-
-def gcd():
-    question = 'Find the greatest common divisor of given numbers.'
-    game_logic(question, get_task)
