@@ -6,9 +6,9 @@ QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(num):
-    if num == 1 or num == 2:
+    if num <= 3:
         return True
-    if num % 2 == 0:
+    elif num % 2 == 0:
         return False
     for i in range(3, int(num ** 0.5) + 1, 2):
         if num % i == 0:
