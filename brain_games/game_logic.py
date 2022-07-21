@@ -2,14 +2,14 @@
 import prompt
 
 
-def game_logic(question, game_func):
+def run_game(QUESTION, get_task):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print(question)
+    print(QUESTION)
     STEP_COUNT = 3
     for _ in range(STEP_COUNT):
-        task, correct_answer = game_func()
+        task, correct_answer = get_task()
         print(f'Question: {task}')
         print('Your answer:', end=' ')
         user_answer = input()
