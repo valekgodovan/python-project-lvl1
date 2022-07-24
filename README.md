@@ -6,6 +6,11 @@ Brain-games is a python package for 5 different games:
 * Brain-gcd
 * Brain-prime
 * Brain-progression
+
+# System requirements
+* WSL Ubuntu
+* Python 3.8
+
 # Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/valekgodovan/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/valekgodovan/python-project-lvl1/actions)
